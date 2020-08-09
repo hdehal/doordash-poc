@@ -33,3 +33,48 @@
 		url("fonts/TTNorms-ExtraBold.ttf") format("truetype"),
 		url("fonts/TTNorms-ExtraBold.eot") format("embedded-opentype");
 }
+
+/* Change wrapper and logo area background on Y-SCROLL */
+.scrolling {
+    background: #fff !important;
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 3 !important;
+}
+
+/* Change nav colors on Y-SCROLL */
+.navList a {
+    font-weight: 500;
+    opacity: 1 !important;
+}
+
+.navItemRed a {
+    color: #eb1700 !important;
+}
+
+.navItemWhite a {
+    color: #FFF !important;
+}
+
+.getStarted {
+    background: #eb1700;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 500px;
+    padding: .2rem 1rem;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
