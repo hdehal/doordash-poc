@@ -1,59 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+import BackgroundImage from 'gatsby-background-image'
 
-const Header = () => (
+const Header = ({ className }) => (
   <StaticQuery
     query={graphql`
       query {
         art_build: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "hero-bg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       }
     `}
     render={data => (
-      <HeaderWrapper>
-        <Container>
-          <Grid>
-            <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
-            </Art>
-            <Text>
-              <h1>
-                Fast in
-                <br />
-                every way
-                <br />
-                that matters
-              </h1>
-              <br />
-              <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
-            </Text>
-          </Grid>
-        </Container>
-      </HeaderWrapper>
+      <BackgroundImage
+        Tag="section"
+        className={className}
+        fluid={data.art_build.childImageSharp.fluid}
+        backgroundColor={`#040e18`}
+      >
+        <HeaderWrapper>
+          <Container>
+            <Grid>
+              <Text>
+                <h1>Increase your takeout sales</h1>
+                <h3>Feature your business on DoorDash and reach new customers</h3>
+              </Text>
+            </Grid>
+          </Container>
+
+        </HeaderWrapper>
+      </BackgroundImage>
     )}
   />
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
+  background-color: transparent;
   padding-top: 96px;
+  height: 100vh;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;
@@ -95,15 +89,6 @@ const Text = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
-  }
-`;
-
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
   }
 `;
 

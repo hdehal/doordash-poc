@@ -1,15 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+// Original GatsbyJS starter project by ajayns
+// https://www.gatsbyjs.org/starters/ajayns/gatsby-absurd/
+
 const SEO_DATA = {
-  description: 'An absurd gatsby starter',
-  title: 'Absurd',
+  description: 'DoorDash POC using a GatsbyJS starter project',
+  title: 'DoorDash GatsbyJS POC',
   url: '',
-  author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
+  author: 'hdehal',
+  keywords: ['gatsby', 'site', 'doordash'],
   img: '',
-  twitterId: '@ajayns_',
-  facebookId: '',
 };
 
 const SEO = () => {

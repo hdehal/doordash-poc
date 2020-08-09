@@ -33,13 +33,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Absurd`,
-        short_name: `absurd`,
+        name: `DoorDash GatsbyJS POC`,
+        short_name: `DoorDash GatsbyJS POC`,
         start_url: `/`,
         background_color: `#8bd8ed`,
         theme_color: `#8bd8ed`,
         display: `minimal-ui`,
-        icon: `static/favicon.svg`,
+        icon: `static/favicon.png`,
       },
     },
     {
