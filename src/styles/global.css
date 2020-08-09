@@ -34,6 +34,10 @@
 		url("fonts/TTNorms-ExtraBold.eot") format("embedded-opentype");
 }
 
+#logo {
+    padding-left: 16px;
+}
+
 /* Change wrapper and logo area background on Y-SCROLL */
 .scrolling {
     background: #fff !important;
@@ -118,6 +122,10 @@
     .signupForm {
         margin-bottom: -1em;
     }
+    .section {
+        background-color: rgba(236, 251, 251, 0.8);
+        animation-name: fadeInOpacity;
+    }
 }
 
 .signupForm h3 {
@@ -140,4 +148,20 @@ input[type="submit"], input[type="button"] {
     font-size: 1em !important;
     font-weight: 500;
     transition: color .2s,background-color .2s,border-color .2s,transform .2s,-webkit-transform .2s;
+    cursor: pointer;
+}
+
+.ready-to-join {
+    width: 100vw;
+    text-align: center;
+    background-image: none;;
+}
+.ready-to-join h2 {
+    font-weight: 600;
+}
+.section {
+    padding: 60px 0;
+}
+.section-green h2 {
+    color: #00838a;
 }

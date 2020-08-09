@@ -2,20 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Section, Container } from '@components/global';
+import BackgroundImage from 'gatsby-background-image'
 
-const About = () => (
+const About = ({ className }) => (
   <StaticQuery
     query={graphql`
       query {
         art_fast: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+          name: { eq: "ready-to-join" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -46,21 +48,35 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
-          <Grid>
-            <div>
-              <h2>Speed past the competition</h2>
-              <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
+
+          {/* READY TO JOIN */}
+          <BackgroundImage
+            Tag="section"
+            className={className}
+            fluid={data.art_fast.childImageSharp.fluid}
+            style={{
+              backgroundSize: 'contain',
+              backgroundPosition: 'left',
+              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#ecfbfb'
+            }}
+          >
+            <Grid>
+              <div class="ready-to-join section section-green">
+                <div class="container">
+                  <h2>Ready to join the 300,000+ restaurants already on DoorDash?</h2>
+                  <a href="#feature1" class="smooth-scroll">
+                    <p>
+                      <AnchorLink href='#features'>Learn more</AnchorLink>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </Grid>
+          </BackgroundImage>
+
+          {/* FEATURES */}
+          <Grid inverse id="features">
             <Art>
               <Img fluid={data.art_learn.childImageSharp.fluid} />
             </Art>
@@ -95,13 +111,12 @@ const About = () => (
 );
 
 const Grid = styled.div`
-  display: grid;
+  display: flex;
   grid-template-columns: 3fr 2fr;
   grid-gap: 40px;
   text-align: right;
   align-items: center;
   justify-items: center;
-  margin: 24px 0;
 
   ${props =>
     props.inverse &&
@@ -124,8 +139,8 @@ const Grid = styled.div`
     }
 
     ${props =>
-      props.inverse &&
-      `
+    props.inverse &&
+    `
         ${Art} {
           order: 2;
         }

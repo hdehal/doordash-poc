@@ -95,7 +95,7 @@ class Navbar extends Component {
     return (
       <Nav {...this.props} className={this.state.showScrollTop === true ? 'scrolling' : 'notscrolling'}>
         <StyledContainer>
-          <Brand><img src={this.state.showScrollTop === true ? DoorDashLogoScrolling : DoorDashLogo} alt="Logo" /></Brand>
+          <Brand id="logo"><img src={this.state.showScrollTop === true ? DoorDashLogoScrolling : DoorDashLogo} alt="Logo" /></Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={this.state.showScrollTop === true ? { color: '#eb1700' } : { color: 'white' }}>
               <MenuIcon />
