@@ -31,10 +31,20 @@ const Header = ({ className }) => (
         <HeaderWrapper>
           <Container>
             <Grid>
-              <Text>
+              <div className="signupCTA">
                 <h1>Increase your takeout sales</h1>
                 <h3>Feature your business on DoorDash and reach new customers</h3>
-              </Text>
+              </div>
+              <div className="signupForm">
+                <h3>Start your 30 day free trial!</h3>
+                <form>
+                  <input type="text" placeholder="Restaurant Name" />
+                  <input type="text" placeholder="Restaurant Address" />
+                  <input type="text" placeholder="Email" />
+                  <input type="tel" placeholder="Mobile Phone e.g. 415-888-8888" />
+                  <input type="button" value="Get Started!" />
+                </form>
+              </div>
             </Grid>
           </Container>
 
@@ -45,51 +55,26 @@ const Header = ({ className }) => (
 );
 
 const HeaderWrapper = styled.header`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
   background-color: transparent;
-  padding-top: 96px;
+  padding-top: 5em;
   height: 100vh;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding-top: 128px;
-  }
-`;
-
-const Art = styled.figure`
-  width: 100%;
-  margin: 0;
-
-  > div {
-    width: 120%;
-    margin-bottom: -4.5%;
-
-    @media (max-width: ${props => props.theme.screen.md}) {
-      width: 100%;
-    }
+    padding - top: 128px;
   }
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  grid-gap: 64px;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    grid-gap: 80px;
-
-    > ${Art} {
-      order: 2;
-    }
-  }
-`;
-
-const Text = styled.div`
-  justify-self: center;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: start;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
 `;
 
 export default Header;

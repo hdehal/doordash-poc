@@ -7,19 +7,19 @@ export const Container = styled.div`
   padding: 0 16px;
 
   @media (min-width: ${props => props.theme.screen.xs}) {
-    max-width: 540px;
+    max-width: 100%;
   }
 
   @media (min-width: ${props => props.theme.screen.sm}) {
-    max-width: 720px;
+    max-width: 100%;
   }
 
   @media (min-width: ${props => props.theme.screen.md}) {
-    max-width: 960px;
+    max-width: 100%;
   }
 
   @media (min-width: ${props => props.theme.screen.lg}) {
-    max-width: 1200px;
+    max-width: 100%;
   }
 
   ${props =>

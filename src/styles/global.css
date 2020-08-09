@@ -49,15 +49,13 @@
     font-weight: 500;
     opacity: 1 !important;
 }
-
 .navItemRed a {
     color: #eb1700 !important;
 }
-
 .navItemWhite a {
     color: #FFF !important;
 }
-
+/* Get Started button on Y-SCROLL */
 .getStarted {
     background: #eb1700;
     color: #fff;
@@ -73,8 +71,73 @@
 	animation-timing-function: ease-in;
 	animation-duration: 1s;
 }
-
 @keyframes fadeInOpacity {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
+}
+/* FORMS */
+.signupForm {
+    display: block;
+    align-self: center;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    width: 480px;
+    padding: 1em;
+    text-align: center;
+}
+.signupCTA {
+    align-self: center;
+    max-width: 480px;
+    padding: 2em;
+}
+.signupCTA h1 {
+    color: #FFF;
+    font-size: 4em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+.signupCTA h3 {
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/* Mobile responsive breakpoint */
+@media (max-width: 480px) {
+    .signupCTA h1 {
+        color: #FFF;
+        font-size: 3em;
+        font-weight: 600;
+        padding-bottom: 0.5em;
+    }
+    .signupCTA h3 {
+        color: #FFF;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    .signupForm {
+        margin-bottom: -1em;
+    }
+}
+
+.signupForm h3 {
+    font-weight: 600;
+}
+.signupForm input {
+    display: block;
+    padding: 0.75em;
+    border-radius: 4px;
+    border: 1px solid #d6d6d6;
+    width: 95%;
+    margin: 1em auto;
+}
+input[type="submit"], input[type="button"] {
+    -webkit-appearance: none;
+    background-color: #ff3008;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em !important;
+    font-weight: 500;
+    transition: color .2s,background-color .2s,border-color .2s,transform .2s,-webkit-transform .2s;
 }
