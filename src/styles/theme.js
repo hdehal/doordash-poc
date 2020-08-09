@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: `'Prata', serif`,
-    secondary: `'Average', serif`,
+    primary: `'DD-TTNorms', serif`,
+    secondary: `'DD-TTNorms', serif`,
   },
   font_size: {
     small: 'font-size: 20px; line-height: 30px',
