@@ -81,10 +81,10 @@ class Navbar extends Component {
           <NavItem className={this.state.showScrollTop === true ? 'navItemRed' : 'navItemWhite'} key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
 
-        {this.state.showScrollTop === true ? 
-        <NavItem className="getStarted">Get Started!</NavItem> : 
-        null}
-          
+        {this.state.showScrollTop === true ?
+          <NavItem className="getStarted">Get Started!</NavItem> :
+          null}
+
       </Scrollspy>
     </NavListWrapper>
   );
@@ -97,7 +97,7 @@ class Navbar extends Component {
         <StyledContainer>
           <Brand><img src={this.state.showScrollTop === true ? DoorDashLogoScrolling : DoorDashLogo} alt="Logo" /></Brand>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
+            <button onClick={this.toggleMobileMenu} style={this.state.showScrollTop === true ? { color: '#eb1700' } : { color: 'white' }}>
               <MenuIcon />
             </button>
           </Mobile>
