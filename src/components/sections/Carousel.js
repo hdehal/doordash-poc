@@ -14,6 +14,8 @@ import rasa from '@images/logos/logo-rasa.png';
 import roamburgers from '@images/logos/logo-roam-burgers.png';
 import torchys from '@images/logos/logo-torchys.png';
 
+// Detect mobile
+const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null;
 
 // Window resize logic for carousel from https://github.com/express-labs/pure-react-carousel/issues/126
 
@@ -36,31 +38,27 @@ export default class extends React.Component {
 
     componentDidMount() {
         window.addEventListener('resize', this.handleWindowResize, false);
-
-        // Detect mobile
-        const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null;
-        isMobile ? this.setState({ totalSlides: 2 }) : this.setState({ totalSlides: 6 });
     }
 
     computeTotalSlides() {
         if (typeof window !== 'undefined') {
             const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-            if (width >1280) {
+            if (width > 1280) {
                 return 6;
             } else if (width <= 1280) {
                 return 2;
             }
 
-/*             if (width < 768) {
-                return 2;
-            } else if (width <= 1024) {
-                return 3;
-            } else if (width <= 1280) {
-                return 4;
-            } else if (width >= 1281) {
-                return 6;
-            } */
+            /*             if (width < 768) {
+                            return 2;
+                        } else if (width <= 1024) {
+                            return 3;
+                        } else if (width <= 1280) {
+                            return 4;
+                        } else if (width >= 1281) {
+                            return 6;
+                        } */
         }
     }
 
@@ -83,7 +81,7 @@ export default class extends React.Component {
                 <CarouselProvider
                     naturalSlideWidth={10}
                     naturalSlideHeight={10}
-                    visibleSlides={this.state.totalSlides}
+                    visibleSlides={this.state.totalSlides !== 2 ? this.state.totalSlides : 2}
                     totalSlides={11}
                     isPlaying
                 >

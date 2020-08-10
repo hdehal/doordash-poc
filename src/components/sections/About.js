@@ -235,7 +235,6 @@ const Grid = styled.div`
   justify-content: flex-end;
   align-items: center;
   align-content: center;
-  justify-item: center;
 `;
 
 export default About;
