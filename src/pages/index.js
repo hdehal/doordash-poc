@@ -12,10 +12,11 @@ const IndexPage = () => (
     <Navbar />
     <Header />
     <About />
+    <Footer /> 
 {/* 
     <Team />
     <Faq />
-    <Footer /> */}
+*/}
   </Layout>
 );
 
