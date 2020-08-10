@@ -393,3 +393,41 @@ div[id^=react-tabs] {
     background: #FFF !important;
 }
 
+
+
+
+
+
+/* TABS */
+
+
+.carouselContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 65vw;
+    padding: 60px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carouselContainer h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #767676;
+}
+
+.Carousel_inside {
+    flex-basis: 0;
+    flex-grow: 0.2;
+    max-width: 100%;
+}
+
+div[class^="slideInner"] img {
+    max-height: 9em;
+    margin-top: -0.5em;
+}
+div[class^="horizontalSlider"] {
+    width: 100vw;
+    max-height: 120px !important;
+}

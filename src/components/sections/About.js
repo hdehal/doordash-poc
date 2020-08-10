@@ -6,6 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Section, Container } from '@components/global';
 import BackgroundImage from 'gatsby-background-image'
 import Tabs from '@sections/Tabs';
+import Carousel from '@sections/Carousel';
 
 import profitPie from '@images/art/profit-pie.svg';
 import reachGraph from '@images/art/reach-graph.svg';
@@ -211,6 +212,13 @@ const About = ({ className }) => (
             <div className="tabContainer">
               <h2>DoorDash helps businesses like yours...</h2>
               <Tabs />
+            </div>
+          </Grid>
+
+          {/* LOGO CAROUSEL */}
+          <Grid>
+            <div className="carouselContainer">
+              <Carousel />
             </div>
           </Grid>
 
