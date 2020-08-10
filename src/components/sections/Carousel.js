@@ -14,9 +14,6 @@ import rasa from '@images/logos/logo-rasa.png';
 import roamburgers from '@images/logos/logo-roam-burgers.png';
 import torchys from '@images/logos/logo-torchys.png';
 
-// Detect mobile
-const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null;
-
 // Window resize logic for carousel from https://github.com/express-labs/pure-react-carousel/issues/126
 
 export default class extends React.Component {
@@ -64,7 +61,6 @@ export default class extends React.Component {
 
     setTotalSlides() {
         const totalSlides = this.computeTotalSlides();
-        console.log(this.computeTotalSlides() + "X");
         if (this.state.totalSlides !== totalSlides) this.setState({ totalSlides });
     }
 

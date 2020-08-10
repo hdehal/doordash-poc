@@ -171,6 +171,10 @@
     .tabContainer {
         max-width: 90vw !important;
     }
+    .talkContainer .btn {
+        margin-left: 0em !important;
+        margin-top: 1em !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -430,4 +434,26 @@ div[class^="slideInner"] img {
 div[class^="horizontalSlider"] {
     width: 100vw;
     max-height: 120px !important;
+}
+
+
+
+
+
+/* TABS */
+
+
+.talkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 65vw;
+    padding: 60px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.talkContainer .btn {
+    margin-left: 2em;
+    margin-top: 0.2em;
 }

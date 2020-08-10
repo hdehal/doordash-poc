@@ -16,10 +16,6 @@ import restaurant from '@images/art/restaurant.png';
 import menu from '@images/art/menu.png';
 import scooter from '@images/art/scooter.png';
 
-// Detect mobile
-const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null;
-const isMobileBackground = isMobile ? 'cover' : 'contain';
-
 const About = ({ className }) => (
   <StaticQuery
     query={graphql`
@@ -219,6 +215,16 @@ const About = ({ className }) => (
           <Grid>
             <div className="carouselContainer">
               <Carousel />
+            </div>
+          </Grid>
+
+          {/* TALK TO US */}
+          <Grid className="grey">
+            <div className="talkContainer">
+              <div><h2>Have questions? Talk to a DoorDash Expert</h2></div>
+              <div>
+              <a href="https://get.doordash.com/reach-new-customers?hsLang=en" class="btn btn-primary">Talk to an Expert</a>
+              </div>
             </div>
           </Grid>
 

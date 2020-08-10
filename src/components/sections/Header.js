@@ -70,7 +70,7 @@ const HeaderWrapper = styled.header`
   min-height: 500px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding - top: 128px;
+    padding-top: 128px;
   }
 `;
 
