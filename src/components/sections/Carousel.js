@@ -48,11 +48,11 @@ export default class extends React.Component {
 
             if (width < 768) {
                 return 2;
-            } else if (width < 1024) {
+            } else if (width <= 1024) {
                 return 3;
-            } else if (width < 1280) {
+            } else if (width <= 1280) {
                 return 4;
-            } else {
+            } else if (width >= 1281) {
                 return 6;
             }
         }
