@@ -28,7 +28,7 @@ const Header = ({ className }) => (
         fluid={data.art_build.childImageSharp.fluid}
         backgroundColor={`#040e18`}
       >
-        <HeaderWrapper>
+        <HeaderWrapper className="header">
           <Container>
             <Grid>
               <div className="signupCTA">
@@ -62,7 +62,7 @@ const HeaderWrapper = styled.header`
   align-content: center;
   background-color: transparent;
   padding-top: 5em;
-  height: 100vh;
+  height: 80vh;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding - top: 128px;
