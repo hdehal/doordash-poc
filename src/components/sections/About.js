@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -8,9 +8,13 @@ import BackgroundImage from 'gatsby-background-image'
 import profitPie from '@images/art/profit-pie.svg';
 import reachGraph from '@images/art/reach-graph.svg';
 import stopwatch from '@images/art/stopwatch.svg';
+import arrowDown from '@images/art/arrow-down.svg';
+import restaurant from '@images/art/restaurant.png';
+import menu from '@images/art/menu.png';
+import scooter from '@images/art/scooter.png';
 
 // Detect mobile
-const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null ;
+const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null;
 const isMobileBackground = isMobile ? 'cover' : 'contain';
 
 const About = ({ className }) => (
@@ -82,7 +86,8 @@ const About = ({ className }) => (
               <div class="ready-to-join section section-green">
                 <h2>Ready to join the 300,000+ restaurants already on DoorDash?</h2>
                 <p>
-                  <AnchorLink href='#features' offset='70'>Learn more</AnchorLink>
+                  <AnchorLink href='#features' offset='50'>Learn more</AnchorLink>
+                  <img src={arrowDown} className="arrow" alt="Up to 60% profit" />
                 </p>
               </div>
             </Grid>
@@ -165,8 +170,7 @@ const About = ({ className }) => (
                 <div class="stat">
                   <img src={stopwatch} alt="Up to 60% profit" />
                   <div>
-                    <h3>37 min</h3>
-                    Average delivery time
+                    37 min<br />Average delivery time
                   </div>
                 </div>
                 <p>
@@ -176,12 +180,35 @@ const About = ({ className }) => (
             </Grid>
           </BackgroundImage>
 
+          {/* STEPS TO GET STARTED */}
+          <Grid>
+            <div class="ready-to-join section section-green green">
+              <h2>3 simple steps to get started:</h2>
+              <div class="container process">
+                <div class="step col-md">
+                  <div class="number">1</div>
+                  <div class="icon"><img src={restaurant} alt="1" /></div>
+                  <div class="label">Tell us about your restaurant</div>
+                </div>
+                <div class="step col-md">
+                  <div class="number">2</div>
+                  <div class="icon"><img src={menu} alt="2" /></div>
+                  <div class="label">Upload your menu</div>
+                </div>
+                <div class="step col-md">
+                  <div class="number">3</div>
+                  <div class="icon"><img src={scooter} alt="3" /></div>
+                  <div class="label">You cook, we deliver</div>
+                </div>
+              </div>
+            </div>
+          </Grid>
+
         </Container>
       </Section>
     )}
   />
 );
-
 
 const Wrapper = styled.header`
   display: flex;
