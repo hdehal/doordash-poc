@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -9,8 +9,8 @@ import profitPie from '@images/art/profit-pie.svg';
 import reachGraph from '@images/art/reach-graph.svg';
 import stopwatch from '@images/art/stopwatch.svg';
 
-// Render map default zoom based on mobile breakpoint
-const isMobile = window.innerWidth < 480;
+// Detect mobile
+const isMobile = typeof window !== `undefined` ? window.innerWidth < 480 : null ;
 const isMobileBackground = isMobile ? 'cover' : 'contain';
 
 const About = ({ className }) => (
