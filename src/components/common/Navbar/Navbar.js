@@ -14,13 +14,43 @@ import {
 } from './style';
 
 import DoorDashLogo from '@images/logos/doordash.svg';
+import DoorDashLogoScrolling from '@images/logos/doordash_scrolling.svg';
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
 const NAV_ITEMS = ['Products', 'Resources', 'Contact Us', 'Log In'];
 
 class Navbar extends Component {
-  state = {
-    mobileMenuOpen: false,
+  constructor(props) {
+    super(props);
+
+    this.scrollFunc = this.scrollFunc.bind(this);
+
+    this.state = {
+      mobileMenuOpen: false,
+      showScrollTop: false
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.scrollFunc)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollFunc)
+  }
+
+  scrollFunc(e) {
+    var y = window.scrollY;
+    if (y >= 100) {
+      this.setState({
+        showScrollTop: true
+      });
+
+    } else {
+      this.setState({
+        showScrollTop: false
+      });
+    }
   };
 
   toggleMobileMenu = () => {
@@ -40,7 +70,7 @@ class Navbar extends Component {
   );
 
   getNavList = ({ mobile = false }) => (
-    <NavListWrapper mobile={mobile}>
+    <NavListWrapper mobile={mobile} className="navList">
       <Scrollspy
         items={NAV_ITEMS.map(item => item.toLowerCase())}
         currentClassName="active"
@@ -48,8 +78,13 @@ class Navbar extends Component {
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem className={this.state.showScrollTop === true ? 'navItemRed' : 'navItemWhite'} key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
+
+        {this.state.showScrollTop === true ?
+          <NavItem className="getStarted">Get Started!</NavItem> :
+          null}
+
       </Scrollspy>
     </NavListWrapper>
   );
@@ -58,11 +93,11 @@ class Navbar extends Component {
     const { mobileMenuOpen } = this.state;
 
     return (
-      <Nav {...this.props}>
+      <Nav {...this.props} className={this.state.showScrollTop === true ? 'scrolling' : 'notscrolling'}>
         <StyledContainer>
-          <Brand><img src={DoorDashLogo} alt="Logo" /></Brand>
+          <Brand id="logo"><img src={this.state.showScrollTop === true ? DoorDashLogoScrolling : DoorDashLogo} alt="Logo" /></Brand>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
+            <button onClick={this.toggleMobileMenu} style={this.state.showScrollTop === true ? { color: '#eb1700' } : { color: 'white' }}>
               <MenuIcon />
             </button>
           </Mobile>

@@ -1,0 +1,208 @@
+@font-face {
+	font-family: "DD-TTNorms";
+	font-style: normal;
+	font-weight: 400;
+	src: url("fonts/TTNorms-Regular.woff2") format("woff2"),
+		url("fonts/TTNorms-Regular.ttf") format("truetype"),
+		url("fonts/TTNorms-Regular.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "DD-TTNorms";
+	font-style: normal;
+	font-weight: 500;
+	src: url("fonts/TTNorms-Medium.woff2") format("woff2"),
+		url("fonts/TTNorms-Medium.ttf") format("truetype"),
+		url("fonts/TTNorms-Medium.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "DD-TTNorms";
+	font-style: normal;
+	font-weight: 700;
+	src: url("fonts/TTNorms-Bold.woff2") format("woff2"),
+		url("fonts/TTNorms-Bold.ttf") format("truetype"),
+        url("fonts/TTNorms-Bold.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "DD-TTNorms";
+	font-style: normal;
+	font-weight: 800;
+	src: url("fonts/TTNorms-ExtraBold.woff2") format("woff2"),
+		url("fonts/TTNorms-ExtraBold.ttf") format("truetype"),
+		url("fonts/TTNorms-ExtraBold.eot") format("embedded-opentype");
+}
+
+#logo {
+    padding-left: 16px;
+}
+
+/* Change wrapper and logo area background on Y-SCROLL */
+.scrolling {
+    background: #fff !important;
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 3 !important;
+}
+
+/* Change nav colors on Y-SCROLL */
+.navList a {
+    font-weight: 500;
+    opacity: 1 !important;
+}
+.navItemRed a {
+    color: #eb1700 !important;
+}
+.navItemWhite a {
+    color: #FFF !important;
+}
+/* Get Started button on Y-SCROLL */
+.getStarted {
+    background: #eb1700;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 500px;
+    padding: .2rem 1rem;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+@keyframes fadeInOpacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+/* FORMS */
+.signupForm {
+    display: block;
+    align-self: center;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    width: 480px;
+    padding: 1em;
+    text-align: center;
+}
+.signupCTA {
+    align-self: center;
+    max-width: 480px;
+    padding: 2em;
+}
+.signupCTA h1 {
+    color: #FFF;
+    font-size: 4em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+.signupCTA h3 {
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/* Mobile responsive breakpoint */
+@media (max-width: 480px) {
+    .signupCTA h1 {
+        color: #FFF;
+        font-size: 3em;
+        font-weight: 600;
+        padding-bottom: 0.5em;
+    }
+    .signupCTA h3 {
+        color: #FFF;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    .signupForm {
+        margin-bottom: -1em;
+    }
+    .section {
+        background-color: rgba(236, 251, 251, 0.8);
+        animation-name: fadeInOpacity;
+    }
+    .features {
+        background-color: rgba(255, 255, 255, 0.8);
+        animation-name: fadeInOpacity;
+        text-align: center; 
+        width: 100% !important;
+        height: auto !important;
+        padding: 1em !important;
+    }
+}
+
+
+
+
+
+.signupForm h3 {
+    font-weight: 600;
+}
+.signupForm input {
+    display: block;
+    padding: 0.75em;
+    border-radius: 4px;
+    border: 1px solid #d6d6d6;
+    width: 95%;
+    margin: 1em auto;
+}
+input[type="submit"], input[type="button"] {
+    -webkit-appearance: none;
+    background-color: #ff3008;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em !important;
+    font-weight: 500;
+    transition: color .2s,background-color .2s,border-color .2s,transform .2s,-webkit-transform .2s;
+    cursor: pointer;
+}
+
+.ready-to-join {
+    width: 100vw;
+    text-align: center;
+    background-image: none;;
+}
+.ready-to-join h2 {
+    font-weight: 600;
+}
+.section {
+    padding: 60px 0;
+}
+.section-green h2 {
+    color: #00838a;
+}
+
+.features {
+    width: 62vw;
+    height: 60vh;
+    padding: 4em;
+}
+
+.reverseFlex {
+    flex-direction: row-reverse !important;
+}
+
+.features .stat {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 500;
+    color: #eb1700;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.number small {
+    display: block;
+}
+
+.stat img {
+    padding-right: 0.8em;
+}
+
+
