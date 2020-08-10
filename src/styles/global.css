@@ -184,6 +184,10 @@ input[type="submit"], input[type="button"] {
     padding: 4em;
 }
 
+.reverseFlex {
+    flex-direction: row-reverse !important;
+}
+
 .features .stat {
     display: flex;
     align-items: center;

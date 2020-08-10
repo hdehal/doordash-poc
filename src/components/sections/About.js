@@ -6,6 +6,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Section, Container } from '@components/global';
 import BackgroundImage from 'gatsby-background-image'
 import profitPie from '@images/art/profit-pie.svg';
+import reachGraph from '@images/art/reach-graph.svg';
+import stopwatch from '@images/art/stopwatch.svg';
 
 // Render map default zoom based on mobile breakpoint
 const isMobile = window.innerWidth < 480;
@@ -37,13 +39,24 @@ const About = ({ className }) => (
           }
         }
 
-        art_ideas: file(
+        art_new_customers: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "new-customers" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        
+        art_options: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "options" }
+        ) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -75,7 +88,7 @@ const About = ({ className }) => (
             </Grid>
           </BackgroundImage>
 
-          {/* FEATURES */}
+          {/* FEATURES 1 of 3 */}
           <BackgroundImage
             Tag="section"
             className={className}
@@ -89,8 +102,7 @@ const About = ({ className }) => (
           >
             <Grid>
               <div></div>
-
-              <div className="features">
+              <div id="features" className="features">
                 <h2>More business, less effort</h2>
                 <div class="stat">
                   <img src={profitPie} alt="Up to 60% profit" />
@@ -101,6 +113,64 @@ const About = ({ className }) => (
                 </div>
                 <p>
                   Today, more and more people want the convenience of delivery. Our app reaches 80% of consumers in America. Your restaurant will be seen by millennials, parents, and even companies who need catering - all without the costs of a dine-in experience.
+                </p>
+              </div>
+            </Grid>
+          </BackgroundImage>
+
+          {/* FEATURES 2 of 3 */}
+          <BackgroundImage
+            Tag="section"
+            className={className}
+            fluid={data.art_new_customers.childImageSharp.fluid}
+            style={{
+              backgroundSize: 'contain',
+              backgroundPosition: 'right',
+              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#f7f7f7'
+            }}
+          >
+            <Grid className="reverseFlex">
+              <div></div>
+              <div className="features">
+                <h2>Reach new customers</h2>
+                <div class="stat">
+                  <img src={reachGraph} alt="Up to 60% profit" />
+                  <div>
+                    92% of orders come from entirely new customers
+                  </div>
+                </div>
+                <p>
+                  We feature your menu on our app and website so that customers can discover your restaurant and order food. All of this will be done without you needing to lift a finger!                </p>
+              </div>
+            </Grid>
+          </BackgroundImage>
+
+          {/* FEATURES 3 of 3 */}
+          <BackgroundImage
+            Tag="section"
+            className={className}
+            fluid={data.art_options.childImageSharp.fluid}
+            style={{
+              backgroundSize: 'contain',
+              backgroundPosition: 'left',
+              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#FFFFFF'
+            }}
+          >
+            <Grid>
+              <div></div>
+              <div className="features">
+                <h2>We give options, you call the shots</h2>
+                <div class="stat">
+                  <img src={stopwatch} alt="Up to 60% profit" />
+                  <div>
+                    <h3>37 min</h3>
+                    Average delivery time
+                  </div>
+                </div>
+                <p>
+                  We use our strong Dasher network to fulfill your delivery orders within 37 minutes on average. So your food is delivered to your customer exactly how you prepared it.
                 </p>
               </div>
             </Grid>
@@ -124,7 +194,7 @@ const Wrapper = styled.header`
   height: 100vh;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding - top: 128px;
+            padding - top: 128px;
   }
 `;
 
