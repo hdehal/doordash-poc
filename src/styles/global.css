@@ -181,6 +181,12 @@
     .custom-copyright li {
         text-align: center;
     }
+    .carouselContainer h2, .carouselContainer h3 {
+        padding: 0em 1em 0em 1em;
+    }
+    .tabContainer, .ready-to-join, .carouselContainer, .talkContainer {
+        padding: 1.2em !important;
+    }
 }
 
 @media (max-width: 480px) {
