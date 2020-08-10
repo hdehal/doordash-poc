@@ -46,7 +46,13 @@ export default class extends React.Component {
         if (typeof window !== 'undefined') {
             const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-            if (width < 768) {
+            if (width >1280) {
+                return 6;
+            } else if (width <= 1280) {
+                return 2;
+            }
+
+/*             if (width < 768) {
                 return 2;
             } else if (width <= 1024) {
                 return 3;
@@ -54,7 +60,7 @@ export default class extends React.Component {
                 return 4;
             } else if (width >= 1281) {
                 return 6;
-            }
+            } */
         }
     }
 
