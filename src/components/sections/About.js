@@ -22,7 +22,7 @@ const About = ({ className }) => (
           name: { eq: "ready-to-join" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 80, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -33,7 +33,7 @@ const About = ({ className }) => (
           name: { eq: "more-business" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 80, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -44,7 +44,7 @@ const About = ({ className }) => (
           name: { eq: "new-customers" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 80, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -55,7 +55,7 @@ const About = ({ className }) => (
           name: { eq: "options" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 80, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

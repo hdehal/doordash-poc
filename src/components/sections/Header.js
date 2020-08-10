@@ -14,7 +14,7 @@ const Header = ({ className }) => (
           name: { eq: "hero-bg" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 90, maxWidth: 1440) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -27,6 +27,10 @@ const Header = ({ className }) => (
         className={className}
         fluid={data.art_build.childImageSharp.fluid}
         backgroundColor={`#040e18`}
+        style={{
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top +12%',
+        }}
       >
         <HeaderWrapper className="header">
           <Container>
@@ -62,7 +66,7 @@ const HeaderWrapper = styled.header`
   align-content: center;
   background-color: transparent;
   padding-top: 5em;
-  height: 80vh;
+  height: 75vh;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding - top: 128px;
