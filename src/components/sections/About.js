@@ -5,6 +5,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Section, Container } from '@components/global';
 import BackgroundImage from 'gatsby-background-image'
+import Tabs from '@sections/Tabs';
+
 import profitPie from '@images/art/profit-pie.svg';
 import reachGraph from '@images/art/reach-graph.svg';
 import stopwatch from '@images/art/stopwatch.svg';
@@ -204,26 +206,19 @@ const About = ({ className }) => (
             </div>
           </Grid>
 
+          {/* TABS */}
+          <Grid className="grey">
+            <div className="tabContainer">
+              <h2>DoorDash helps businesses like yours...</h2>
+              <Tabs />
+            </div>
+          </Grid>
+
         </Container>
       </Section>
     )}
   />
 );
-
-const Wrapper = styled.header`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: center;
-  background-color: transparent;
-  padding-top: 5em;
-  height: 100vh;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-            padding - top: 128px;
-  }
-`;
 
 const Grid = styled.div`
   display: flex;
