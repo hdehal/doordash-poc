@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -38,20 +38,18 @@ export default class extends React.Component {
     }
 
     computeTotalSlides() {
+        if (typeof window !== 'undefined') {
+            const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-        // Fixes WebpackError error in Netlify node compile
-        const hasDoc = document.documentElement.clientWidth !== `undefined` ? document.documentElement.clientWidth : null
-
-        const width = Math.max(hasDoc, window.innerWidth || 0);
-
-        if (width < 768) {
-            return 2;
-        } else if (width < 1024) {
-            return 3;
-        } else if (width < 1280) {
-            return 4;
-        } else {
-            return 6;
+            if (width < 768) {
+                return 2;
+            } else if (width < 1024) {
+                return 3;
+            } else if (width < 1280) {
+                return 4;
+            } else {
+                return 6;
+            }
         }
     }
 
