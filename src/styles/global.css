@@ -159,6 +159,9 @@
     .stat img {
         padding-bottom: 0.2em;
     }
+    .step {
+        flex-grow: 1 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -247,11 +250,12 @@ div[class^="About"] p {
 .process {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .step {
     flex-basis: 0;
-    flex-grow: 1;
+    flex-grow: 0.2;
     max-width: 100%;
 }
 
