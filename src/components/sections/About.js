@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Section, Container } from '@components/global';
 import BackgroundImage from 'gatsby-background-image'
+import profitPie from '@images/art/profit-pie.svg';
+
+// Render map default zoom based on mobile breakpoint
+const isMobile = window.innerWidth < 480;
+const isMobileBackground = isMobile ? 'cover' : 'contain';
 
 const About = ({ className }) => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_ready_to_join: file(
           sourceInstanceName: { eq: "art" }
           name: { eq: "ready-to-join" }
         ) {
@@ -22,13 +26,13 @@ const About = ({ className }) => (
           }
         }
 
-        art_learn: file(
+        art_more_business: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
+          name: { eq: "more-business" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -53,7 +57,7 @@ const About = ({ className }) => (
           <BackgroundImage
             Tag="section"
             className={className}
-            fluid={data.art_fast.childImageSharp.fluid}
+            fluid={data.art_ready_to_join.childImageSharp.fluid}
             style={{
               backgroundSize: 'contain',
               backgroundPosition: 'left',
@@ -63,95 +67,75 @@ const About = ({ className }) => (
           >
             <Grid>
               <div class="ready-to-join section section-green">
-                <div class="container">
-                  <h2>Ready to join the 300,000+ restaurants already on DoorDash?</h2>
-                  <a href="#feature1" class="smooth-scroll">
-                    <p>
-                      <AnchorLink href='#features'>Learn more</AnchorLink>
-                    </p>
-                  </a>
-                </div>
+                <h2>Ready to join the 300,000+ restaurants already on DoorDash?</h2>
+                <p>
+                  <AnchorLink href='#features' offset='70'>Learn more</AnchorLink>
+                </p>
               </div>
             </Grid>
           </BackgroundImage>
 
           {/* FEATURES */}
-          <Grid inverse id="features">
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
-            </Art>
-          </Grid>
+          <BackgroundImage
+            Tag="section"
+            className={className}
+            fluid={data.art_more_business.childImageSharp.fluid}
+            style={{
+              backgroundSize: 'contain',
+              backgroundPosition: 'left',
+              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#FFFFFF'
+            }}
+          >
+            <Grid>
+              <div></div>
+
+              <div className="features">
+                <h2>More business, less effort</h2>
+                <div class="stat">
+                  <img src={profitPie} alt="Up to 60% profit" />
+                  <div>
+                    <div class="number"><small>up to</small>60%</div>
+                    Profit on incremental orders
+                  </div>
+                </div>
+                <p>
+                  Today, more and more people want the convenience of delivery. Our app reaches 80% of consumers in America. Your restaurant will be seen by millennials, parents, and even companies who need catering - all without the costs of a dine-in experience.
+                </p>
+              </div>
+            </Grid>
+          </BackgroundImage>
+
         </Container>
       </Section>
     )}
   />
 );
 
-const Grid = styled.div`
+
+const Wrapper = styled.header`
   display: flex;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 40px;
-  text-align: right;
-  align-items: center;
-  justify-items: center;
-
-  ${props =>
-    props.inverse &&
-    `
-    text-align: left;
-    grid-template-columns: 2fr 3fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
-  }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color: transparent;
+  padding-top: 5em;
+  height: 100vh;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
-
-    ${props =>
-    props.inverse &&
-    `
-        ${Art} {
-          order: 2;
-        }
-    `}
+    padding - top: 128px;
   }
 `;
 
-const Art = styled.figure`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
+const Grid = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  justify-item: center;
 `;
 
 export default About;

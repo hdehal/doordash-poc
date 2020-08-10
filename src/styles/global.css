@@ -126,7 +126,19 @@
         background-color: rgba(236, 251, 251, 0.8);
         animation-name: fadeInOpacity;
     }
+    .features {
+        background-color: rgba(255, 255, 255, 0.8);
+        animation-name: fadeInOpacity;
+        text-align: center; 
+        width: 100% !important;
+        height: auto !important;
+        padding: 1em !important;
+    }
 }
+
+
+
+
 
 .signupForm h3 {
     font-weight: 600;
@@ -165,3 +177,28 @@ input[type="submit"], input[type="button"] {
 .section-green h2 {
     color: #00838a;
 }
+
+.features {
+    width: 62vw;
+    height: 60vh;
+    padding: 4em;
+}
+
+.features .stat {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 500;
+    color: #eb1700;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.number small {
+    display: block;
+}
+
+.stat img {
+    padding-right: 0.8em;
+}
+
+
