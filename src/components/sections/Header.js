@@ -37,16 +37,20 @@ const Header = ({ className }) => (
             <Grid>
               <div className="signupCTA">
                 <h1>Increase your takeout sales</h1>
-                <h3>Feature your business on DoorDash and reach new customers</h3>
+                <h2>Feature your business on DoorDash and reach new customers</h2>
               </div>
               <div className="signupForm">
                 <h3>Start your 30 day free trial!</h3>
                 <form>
-                  <input type="text" placeholder="Restaurant Name" />
-                  <input type="text" placeholder="Restaurant Address" />
-                  <input type="text" placeholder="Email" />
-                  <input type="tel" placeholder="Mobile Phone e.g. 415-888-8888" />
-                  <input type="button" value="Get Started!" />
+                  <input type="text" id="restName" aria-placeholder="Restaurant Name" placeholder="Restaurant Name" />
+                  <label for="restName">Restaurant Name</label>
+                  <input type="text" id="restAddress" aria-placeholder="Restaurant Address" placeholder="Restaurant Address" />
+                  <label for="restAddress">Restaurant Address</label>
+                  <input type="text" id="restEmail" aria-placeholder="Email" placeholder="Email" />
+                  <label for="restEmail">Email</label>
+                  <input type="tel" id="restTel" aria-placeholder="Mobile Phone" placeholder="Mobile Phone e.g. 415-888-8888" />
+                  <label for="restTel">Mobile Phone</label>
+                  <input type="button" className="btn" value="Get Started!" />
                 </form>
               </div>
             </Grid>

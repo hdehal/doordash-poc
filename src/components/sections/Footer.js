@@ -11,49 +11,56 @@ export default () => (
 
   <div className="copyrightContainer">
 
-    <ul className="siteMap">
-      <h4>Get to Know Us</h4>
-      <li><a href="https://www.doordash.com/about/">About Us</a></li>
-      <li><a href="https://www.doordash.com/careers/">Careers</a></li>
-      <li><a href="http://blog.doordash.com/">Blog</a></li>
-      <li><a href="https://www.linkedin.com/company/doordash">LinkedIn</a></li>
-      <li><a href="https://www.glassdoor.com/Reviews/DoorDash-Reviews-E813073.htm">Glassdoor</a></li>
-      <li><a href="https://www.doordash.com/accessibility/">Accessibility</a></li>
-    </ul>
+    <div>
+      <h1>Get to Know Us</h1>
+      <ul className="siteMap">
+        <li><a href="https://www.doordash.com/about/">About Us</a></li>
+        <li><a href="https://www.doordash.com/careers/">Careers</a></li>
+        <li><a href="http://blog.doordash.com/">Blog</a></li>
+        <li><a href="https://www.linkedin.com/company/doordash">LinkedIn</a></li>
+        <li><a href="https://www.glassdoor.com/Reviews/DoorDash-Reviews-E813073.htm">Glassdoor</a></li>
+        <li><a href="https://www.doordash.com/accessibility/">Accessibility</a></li>
+      </ul></div>
 
-    <ul className="siteMap">
-      <h4>Let Us Help You</h4>
-      <li><a href="https://www.doordash.com/consumer/edit_profile/">Account Details</a></li>
-      <li><a href="https://www.doordash.com/orders/">Order History</a></li>
-      <li><a href="https://support.doordash.com/">Support</a></li>
-      <li><a href="https://support.doordash.com/#/general">FAQs</a></li>
-    </ul>
+    <div>
+      <h1>Let Us Help You</h1>
+      <ul className="siteMap">
+        <li><a href="https://www.doordash.com/consumer/edit_profile/">Account Details</a></li>
+        <li><a href="https://www.doordash.com/orders/">Order History</a></li>
+        <li><a href="https://support.doordash.com/">Support</a></li>
+        <li><a href="https://support.doordash.com/#/general">FAQs</a></li>
+      </ul>
+    </div>
 
-    <ul className="siteMap">
-      <h4>Doing Business</h4>
-      <li><a href="https://www.doordash.com/dasher/signup/">Become a Dasher</a></li>
-      <li><a href="https://www.doordash.com/merchant/apply/">Be a Partner Restaurant</a></li>
-      <li><a href="https://www.doordash.com/drive/discover/">Get Dashers for Deliveries</a></li>
-    </ul>
+    <div>
+      <h1>Doing Business</h1>
+      <ul className="siteMap">
+        <li><a href="https://www.doordash.com/dasher/signup/">Become a Dasher</a></li>
+        <li><a href="https://www.doordash.com/merchant/apply/">Be a Partner Restaurant</a></li>
+        <li><a href="https://www.doordash.com/drive/discover/">Get Dashers for Deliveries</a></li>
+      </ul>
+    </div>
 
-    <ul className="getApp">
-      <li>
-        <a href="https://itunes.apple.com/us/app/doordash-food-delivery/id719972451?mt=8" target="_blank" rel="noreferrer" class="custom-footer-logo">
-          <img src={appleStore} alt="Available on the App Store" />
-        </a>
-      </li>
-      <li>
-        <a href="https://play.google.com/store/apps/details?id=com.dd.doordash" target="_blank" rel="noreferrer" class="custom-footer-logo">
-          <img src={googleStore} alt="Android App on Google Play" />
-        </a>
-      </li>
-    </ul>
-
+    <div>
+      <ul className="getApp">
+        <li>
+          <a href="https://itunes.apple.com/us/app/doordash-food-delivery/id719972451?mt=8" target="_blank" rel="noreferrer" class="custom-footer-logo">
+            <img src={appleStore} alt="Available on the App Store" />
+          </a>
+        </li>
+        <li>
+          <a href="https://play.google.com/store/apps/details?id=com.dd.doordash" target="_blank" rel="noreferrer" class="custom-footer-logo">
+            <img src={googleStore} alt="Android App on Google Play" />
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <div className="custom-copyright">
       <ul>
         <li>
-          <img src={dasherIcon} alt="DoorDash" /><a href="https://www.doordash.com/" class="custom-footer-logo">
+          <a href="https://www.doordash.com/" class="custom-footer-logo">
+            <img src={dasherIcon} alt="DoorDash" />
           </a>
         </li>
         <li>
