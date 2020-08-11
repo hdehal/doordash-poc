@@ -1,5 +1,5 @@
 ### B2B Food Delivery Website Case Study
-Intro text TBD
+TBD
 
 ### Lighthouse Test Results
 
