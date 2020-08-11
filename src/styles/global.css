@@ -98,7 +98,6 @@
 .signupCTA {
     align-self: center;
     max-width: 560px;
-    padding: 2em;
 }
 .signupCTA h1 {
     color: #FFF;
@@ -143,7 +142,7 @@
         color: #FFF;
         font-size: 3em;
         font-weight: 600;
-        padding-bottom: 0.5em;
+        text-align: center;
     }
     .signupCTA h3 {
         color: #FFF;
@@ -226,7 +225,7 @@
 
 @media (max-width: 480px) {
     .header {
-        min-height: 100vh;
+        min-height: 100vh !important;
     }
 }
 
