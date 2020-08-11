@@ -111,12 +111,11 @@ const About = ({ className }) => (
                 <div class="stat">
                   <img src={profitPie} alt="Up to 60% profit" />
                   <div>
-                    <div class="number"><small>up to</small>60%</div>
-                    Profit on incremental orders
+                    Up to 60% profit on incremental orders
                   </div>
                 </div>
                 <p>
-                  Today, more and more people want the convenience of delivery. Our app reaches 80% of consumers in America. Your restaurant will be seen by millennials, parents, and even companies who need catering - all without the costs of a dine-in experience.
+                  Our app reaches 80% of consumers in America. Your restaurant will be seen by millennials, parents, and even companies who need catering - all without the costs of a dine-in experience.
                 </p>
               </div>
             </Grid>
@@ -167,9 +166,9 @@ const About = ({ className }) => (
               <div className="features">
                 <h2>We give options, you call the shots</h2>
                 <div class="stat">
-                  <img src={stopwatch} alt="Up to 60% profit" />
+                  <img src={stopwatch} alt="37 min average delivery time" />
                   <div>
-                    37 min<br />Average delivery time
+                    37min average delivery time
                   </div>
                 </div>
                 <p>
