@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -14,7 +14,7 @@ import rasa from '@images/logos/logo-rasa.png';
 import roamburgers from '@images/logos/logo-roam-burgers.png';
 import torchys from '@images/logos/logo-torchys.png';
 
-// Window resize logic from https://github.com/express-labs/pure-react-carousel/issues/126
+// Window resize logic for carousel from https://github.com/express-labs/pure-react-carousel/issues/126
 
 export default class extends React.Component {
     constructor(props) {
@@ -38,26 +38,29 @@ export default class extends React.Component {
     }
 
     computeTotalSlides() {
+        if (typeof window !== 'undefined') {
+            const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-        // Fixes WebpackError error in Netlify node compile
-        const hasDoc = document.documentElement.clientWidth !== `undefined` ? document.documentElement.clientWidth : null
+            if (width > 1280) {
+                return 6;
+            } else if (width <= 1280) {
+                return 2;
+            }
 
-        const width = Math.max(hasDoc, window.innerWidth || 0);
-
-        if (width < 768) {
-            return 2;
-        } else if (width < 1024) {
-            return 3;
-        } else if (width < 1280) {
-            return 4;
-        } else {
-            return 6;
+            /*             if (width < 768) {
+                            return 2;
+                        } else if (width <= 1024) {
+                            return 3;
+                        } else if (width <= 1280) {
+                            return 4;
+                        } else if (width >= 1281) {
+                            return 6;
+                        } */
         }
     }
 
     setTotalSlides() {
         const totalSlides = this.computeTotalSlides();
-        console.log(this.computeTotalSlides() + "X");
         if (this.state.totalSlides !== totalSlides) this.setState({ totalSlides });
     }
 
@@ -74,7 +77,7 @@ export default class extends React.Component {
                 <CarouselProvider
                     naturalSlideWidth={10}
                     naturalSlideHeight={10}
-                    visibleSlides={this.state.totalSlides}
+                    visibleSlides={this.state.totalSlides !== 2 ? this.state.totalSlides : 2}
                     totalSlides={11}
                     isPlaying
                 >

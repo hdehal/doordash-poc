@@ -68,7 +68,7 @@
     color: #fff;
     font-weight: 500;
     border-radius: 500px;
-    padding: .2rem 1rem;
+    padding: .1rem 0.5rem !important;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -92,9 +92,12 @@
     padding: 1em;
     text-align: center;
 }
+.signupForm label {
+    display: none;
+}
 .signupCTA {
     align-self: center;
-    max-width: 480px;
+    max-width: 560px;
     padding: 2em;
 }
 .signupCTA h1 {
@@ -103,10 +106,10 @@
     font-weight: 600;
     padding-bottom: 0.5em;
 }
-.signupCTA h3 {
-    color: #FFF;
-    font-size: 2em;
-    font-weight: 400;
+.signupCTA h2 {
+    color: #FFF !important;
+    font-size: 1.9em !important;
+    font-weight: 500 !important;
 }
 
 /* Mobile responsive breakpoint */
@@ -170,6 +173,39 @@
     }
     .tabContainer {
         max-width: 90vw !important;
+    }
+    .talkContainer .btn {
+        margin-left: 0em !important;
+        margin-top: 1em !important;
+    }
+    .custom-copyright a {
+        margin-right: 0em !important;
+    }
+    .custom-copyright li {
+        text-align: center;
+    }
+    .carouselContainer h2, .carouselContainer h3 {
+        padding: 0em 1em 0em 1em;
+    }
+    .tabContainer, .ready-to-join, .carouselContainer, .talkContainer {
+        padding: 1.2em !important;
+    }
+    .social li:first-of-type {
+        padding-left: 0em;
+    }
+    .getApp img {
+        margin-top: 0em;
+    }
+    .siteMap {
+        margin: 0;
+        width: 100vw;
+        padding-left: 0;
+    }
+    .copyrightContainer {
+        max-width: 100vw !important;
+    }
+    .custom-copyright ul, .getApp {
+        padding-left: 1em !important;
     }
 }
 
@@ -317,13 +353,16 @@ div[class^="About"] p {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
+    cursor: pointer;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn:hover {
+    background: #d21500;
 }
 
 
 /* TABS */
-
-
 .tabContainer {
     background-color: #f7f7f7;
     display: flex;
@@ -332,7 +371,6 @@ div[class^="About"] p {
     max-width: 65vw;
     padding: 60px 0;
     margin: 0 auto;
-    
 }
 
 .tabContainer h2 {
@@ -354,7 +392,7 @@ div[class^="About"] p {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    
+    padding: 1em;
 }
 
 .tabImage img {
@@ -388,19 +426,11 @@ div[class^="About"] p {
 .react-tabs__tab-list {
     margin: 0px !important;
 }
-
 div[id^=react-tabs] {
     background: #FFF !important;
 }
 
-
-
-
-
-
-/* TABS */
-
-
+/* CAROUSEL */
 .carouselContainer {
     display: flex;
     flex-wrap: wrap;
@@ -430,4 +460,96 @@ div[class^="slideInner"] img {
 div[class^="horizontalSlider"] {
     width: 100vw;
     max-height: 120px !important;
+}
+
+/* TALK */
+.talkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 65vw;
+    padding: 60px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.talkContainer .btn {
+    margin-left: 2em;
+    margin-top: 0.2em;
+}
+
+/* COPYRIGHT */
+.copyrightContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 65vw;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em !important;
+    color: gray;
+}
+.copyrightContainer li {
+    margin: 0.5em 0em 0.5em 0em;
+}
+.copyrightContainer h1 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0em 0em 0em 1em !important;
+    padding: 0px !important;
+    text-align: left;
+    max-height: 2em;
+}
+.copyrightContainer li, .copyrightContainer h4 {
+    list-style-type: none;
+    text-align: left;
+}
+.custom-copyright ul, .getApp {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 0;
+}
+.custom-copyright li {
+    margin-right: 1em;
+    font-size: 1em !important;
+}
+.custom-copyright a, .copyrightContainer a {
+    margin-right: 1em;
+    color: gray !important;
+    text-decoration: none !important;
+    padding: 3px;
+}
+.custom-copyright img {
+    vertical-align: text-top;
+}
+.copyrightContainer h4 {
+    margin-left: 1em;
+}
+.siteMap {
+    padding: 0em 1em 0em 1em;
+}
+
+/* Social and app icons */
+.custom-copyright.social {
+    margin: 0 auto;
+}
+.social a {
+    opacity: 0.3;
+}
+.social a:hover {
+    opacity: 0.8;
+}
+.social li:first-of-type {
+    padding-left: 1em;
+}
+.getApp img {
+    background: #000;
+    border-radius: 5px;
+    margin-top: 1.5em;
+    opacity: 0.7;
+}
+.getApp img:hover {
+    opacity: 1;
+}
+.getApp li:first-of-type {
+    margin-right: 1em;
 }
