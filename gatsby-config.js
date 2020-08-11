@@ -2,17 +2,6 @@ const path = require('path');
 
 module.exports = {
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-159568942-3",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Defers execution of Google Analytics script after pageload...
-        // Because I feel the need... The need for speed!
-        defer: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-svgr`,
@@ -57,6 +46,14 @@ module.exports = {
           '@styles': path.resolve(__dirname, 'src/styles/'),
           '@static': path.resolve(__dirname, 'static/'),
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-159568942-3`,
+        head: false,
+        anonymize: true,
       },
     },
   ],
