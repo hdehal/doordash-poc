@@ -3,19 +3,21 @@ Competition in the food delivery market is fierce, particularly with the impact 
 
 "Recently, Edison Trends reported that overall food delivery industry sales increased by 51% since early March when a national emergency was declared in response to the COVID-19 pandemic."
 
-<img align="right" width="250" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_npr_marketshare.png">
+<img align="right" width="450" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_npr_marketshare.png">
 
 The current market provides an opportunity to innovate by making improvements in UI/UX of both food delivery websites and applications.
 
 A [study](https://www.nngroup.com/articles/the-need-for-speed) by Nielsen Norman Group emphasizes that despite an increase in internet speeds, page load times have not meaningfully improved over time. This is important because "the effects of slow-loading web pages on site abandonment and conversion has been proven time and again" as supported by the following studies:
 
-- [Google](https://ai.googleblog.com/2009/06/speed-matters.html) and [Bing](https://conferences.oreilly.com/velocity/velocity2009/public/schedule/detail/8523) both reported that even half-second delays in load time resulted in measurably lower conversion metrics (number of searches and revenue per user).
 - [Google](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/) found 53% of mobile visits ended if a page took **longer than 3 seconds** to load.
 - [Mozilla](https://blog.mozilla.org/metrics/2010/04/05/firefox-page-load-speed-part-ii/) experiment which found that reducing the page load time by 2 seconds led to 15% higher conversion.
 - [Akamai](https://www.akamai.com/us/en/multimedia/documents/report/akamai-state-of-online-retail-performance-2017-holiday.pdf) aggregated data from 17 retailers (7 billion pageviews) and found that conversion rates were highest for pages that loaded in **less than 2 seconds**; longer load times correlated with 50% drops in conversion rates and increased bounce rates, especially for mobile visitors.
 
 ### Making UI/UX Improvements
 This experiment was conducted using the B2B or merchant websites from a handful of popular food delivery companies. I chose the website for the market leader and converted the existing [DoorDash B2B website](https://get.doordash.com) to a new CMS and tech stack, with the goal of measuring hypothetical improvements against its competitors.
+
+:link: **View the DoorDash POC here:** [https://doordash-poc.harrydehal.com](https://doordash-poc.harrydehal.com)
+
 
 | Company      | URL                                 | Stack or CMS             |
 |--------------|-------------------------------------|--------------------------|
@@ -25,8 +27,6 @@ This experiment was conducted using the B2B or merchant websites from a handful 
 | Postmates    | https://postmates.com/partner       | React                    |
 | Uber Eats    | https://www.ubereats.com/restaurant | Enyo                     |
 | Zomato       | https://www.zomato.com/business     | React                    |
-
-:link: **View the DoorDash POC here:** [https://doordash-poc.harrydehal.com](https://doordash-poc.harrydehal.com)
 
 ### Lighthouse Test Results
 
@@ -51,7 +51,7 @@ On the consumer side DoorDash customers spent $36 per transaction, while Grubhub
 
 With DoorDash having a market share of 45% and revenue upwards of $900m per year, reducing the page load time by merely 2 seconds could lead to a higher merchant *conversion rate optimization* (CRO) of 15% (per Mozilla) up to 50%+ (per Akamai and Google).
 
-<img align="left" width="250" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_prices.png">
+<img align="right" width="450" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_prices.png">
 
 In conclusion, improving the B2B websites with an empahsis on performance, accessibility (a11y), internationalization (i18n), SEO, and overall UI/UX best practices can help capture tens of millions of dollars in revenue by optimizing merchant conversion rates (CRO), which are extremely vulnerable to *hungry* (or *hangry*) customers impacted by speed or other accessibility issues. Ultimately, with food delivery, every second counts for hungry customers.
 
@@ -68,7 +68,6 @@ In conclusion, improving the B2B websites with an empahsis on performance, acces
   - Lighthouse
 
 [<img src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/app_screenshot.png">](https://doordash-poc.harrydehal.com)
-
 ### References
 1. https://www.nngroup.com/articles/the-need-for-speed
 2. https://news.yahoo.com/grocery-delivery-may-cost-extra-184904429.html
