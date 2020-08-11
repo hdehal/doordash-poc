@@ -40,6 +40,37 @@
 .navList, #hamburgerNav {
     margin-top: -0.9em !important;
 }
+.header {
+    height: 75vh !important;
+}
+.btn.btn-primary {
+    background: #eb1700;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 2em;
+    text-decoration: none;
+    color: #FFF;
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn:hover {
+    background: #d21500;
+}
 
 /* Change wrapper and logo area background on Y-SCROLL */
 .scrolling {
@@ -98,7 +129,6 @@
 .signupCTA {
     align-self: center;
     max-width: 560px;
-    padding: 2em;
 }
 .signupCTA h1 {
     color: #FFF;
@@ -114,11 +144,46 @@
 
 /* Mobile responsive breakpoint */
 @media (max-width: 960px) {
-    .header {
-        height: 110vh !important;
-    }
     .signupForm {
         margin-bottom: 4em;
+    }
+    .signupCTA h2 {
+        display: none;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+    }
+    .features {
+        background-color: rgba(255, 255, 255, 0.7);
+        animation-name: fadeInOpacity;
+        text-align: center; 
+        width: 100% !important;
+        height: auto !important;
+        padding: 1em !important;
+    }
+    .header {
+        min-height: 100vh !important;
+    }
+    .signupCTA h1 {
+        color: #FFF;
+        font-size: 3em;
+        font-weight: 600;
+        text-align: center;
+    }
+    .signupCTA h3 {
+        color: #FFF;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    .react-tabs__tab {
+        max-width: 33% !important;
+    }
+    .tabText {
+        flex-basis: content !important;
+    }
+    .tabContainer, .react-tabs {
+        max-width: 90vw !important;
     }
 }
 
@@ -132,35 +197,12 @@
     .features img {
         max-height: 2.5em;
     }
-    .signupCTA h1 {
-        color: #FFF;
-        font-size: 3em;
-        font-weight: 600;
-        padding-bottom: 0.5em;
-    }
-    .signupCTA h3 {
-        color: #FFF;
-        font-size: 1.5em;
-        font-weight: 400;
-    }
-    .signupForm {
-        margin-bottom: 1em;
-        height: 120vh;
-    }
-    .header {
-        height: 120vh !important;
+    .talkContainer span {
+        display: none;
     }
     .section {
         background-color: rgba(236, 251, 251, 0.8);
         animation-name: fadeInOpacity;
-    }
-    .features {
-        background-color: rgba(255, 255, 255, 0.8);
-        animation-name: fadeInOpacity;
-        text-align: center; 
-        width: 100% !important;
-        height: auto !important;
-        padding: 1em !important;
     }
     div[class^="About"] p {
         font-size: 0.95em !important;
@@ -175,15 +217,6 @@
     }
     .step {
         flex-grow: 1 !important;
-    }
-    .react-tabs__tab {
-        max-width: 33% !important;
-    }
-    .tabText {
-        flex-basis: content !important;
-    }
-    .tabContainer, .react-tabs {
-        max-width: 90vw !important;
     }
     .talkContainer .btn {
         margin-left: 0em !important;
@@ -220,16 +253,6 @@
     }
 }
 
-@media (max-width: 480px) {
-    .signupCTA {
-        padding-top: 25em;
-    }
-    .header {
-        height: 100vh !important;
-    }
-}
-
-
 .signupForm h3 {
     font-weight: 600;
 }
@@ -252,12 +275,10 @@ input[type="submit"], input[type="button"] {
     transition: color .2s,background-color .2s,border-color .2s,transform .2s,-webkit-transform .2s;
     cursor: pointer;
 }
-
 h2 {
     font-weight: 600 !important;
     color: #434343 !important;
 }
-
 div[class^="About"] p {
     color: #767676 !important;
     font-size: 1.25em;
@@ -311,13 +332,11 @@ div[class^="About"] p {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .step {
     flex-basis: 0;
     flex-grow: 0.2;
     max-width: 100%;
 }
-
 .process .step {
     background: #fff;
     margin: 1em;
@@ -338,41 +357,6 @@ div[class^="About"] p {
     color: #434343;
 }
 
-
-
-
-.btn.btn-primary {
-    background: #eb1700;
-    border: none;
-    font-size: 1em;
-    font-weight: 500;
-    line-height: 2em;
-    text-decoration: none;
-    color: #FFF;
-}
-
-.btn {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    cursor: pointer;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.btn:hover {
-    background: #d21500;
-}
-
-
 /* TABS */
 .tabContainer {
     background-color: #f7f7f7;
@@ -383,7 +367,6 @@ div[class^="About"] p {
     padding: 60px 0;
     margin: 0 auto;
 }
-
 .tabContainer h2 {
     margin-bottom: 0.5em;
 }
@@ -391,13 +374,11 @@ div[class^="About"] p {
 .tabContainer .btn {
     margin: 1em 0em 0em 0em;
 }
-
 .tabs {
     flex-basis: 0;
     flex-grow: 0.2;
     max-width: 100%;
 }
-
 .tabContent {
     display: flex;
     flex-wrap: wrap;
@@ -405,27 +386,23 @@ div[class^="About"] p {
     align-items: center;
     padding: 1em;
 }
-
 .tabImage img {
-    max-height: 14em;
-
+    max-height: 180px;
 }
-
 .tabText {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
 }
-
 .react-tabs__tab-list {
     border-bottom: 1px solid #dee2e6;
+    margin: 0px !important;
 }
 .react-tabs__tab {
     font-size: 1.2em !important;
     font-weight: 500 !important;
     color: #767676 !important;
 }
-
 .react-tabs__tab--selected {
     color: #000 !important;
     border-color: #dee2e6 !important;
@@ -433,9 +410,6 @@ div[class^="About"] p {
     padding: 0.7em !important;
     font-size: 1.2em !important;
     font-weight: 500  !important;
-}
-.react-tabs__tab-list {
-    margin: 0px !important;
 }
 div[id^=react-tabs] {
     background: #FFF !important;
@@ -451,19 +425,16 @@ div[id^=react-tabs] {
     margin: 0 auto;
     text-align: center;
 }
-
 .carouselContainer h3 {
     font-size: 24px;
     font-weight: 500;
     color: #767676;
 }
-
 .Carousel_inside {
     flex-basis: 0;
     flex-grow: 0.2;
     max-width: 100%;
 }
-
 div[class^="slideInner"] img {
     max-height: 9em;
     margin-top: -0.5em;
@@ -483,7 +454,6 @@ div[class^="horizontalSlider"] {
     margin: 0 auto;
     text-align: center;
 }
-
 .talkContainer .btn {
     margin-left: 2em;
     margin-top: 0.2em;
@@ -527,7 +497,6 @@ div[class^="horizontalSlider"] {
     margin-right: 1em;
     color: gray !important;
     text-decoration: none !important;
-    padding: 3px;
 }
 .custom-copyright img {
     vertical-align: text-top;
@@ -555,8 +524,8 @@ div[class^="horizontalSlider"] {
 .getApp img {
     background: #000;
     border-radius: 5px;
-    margin-top: 1.5em;
     opacity: 0.7;
+    padding: 0.2em;
 }
 .getApp img:hover {
     opacity: 1;

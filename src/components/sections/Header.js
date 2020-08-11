@@ -70,7 +70,6 @@ const HeaderWrapper = styled.header`
   align-content: center;
   background-color: transparent;
   padding-top: 5em;
-  height: 75vh;
   min-height: 500px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
