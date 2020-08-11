@@ -1,8 +1,6 @@
 ### Case Study: Every Second Counts for Hungry Customers
 Competition in the food delivery market is fierce, particularly with the impact of pandemic-weary consumers and hindered demand for dine-in restaurants. As of 2020, DoorDash has the largest market share of 45%, followed closely by the combined shares of Uber Eats and Postmates at 37% (following a July 2020 acqusition).
 
-"Recently, Edison Trends reported that overall food delivery industry sales increased by 51% since early March when a national emergency was declared in response to the COVID-19 pandemic."
-
 <img align="right" width="450" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_npr_marketshare.png">
 
 The current market provides an opportunity to innovate by making improvements in UI/UX of both food delivery websites and applications.
@@ -10,8 +8,8 @@ The current market provides an opportunity to innovate by making improvements in
 A [study](https://www.nngroup.com/articles/the-need-for-speed) by Nielsen Norman Group emphasizes that despite an increase in internet speeds, page load times have not meaningfully improved over time. This is important because "the effects of slow-loading web pages on site abandonment and conversion has been proven time and again" as supported by the following studies:
 
 - [Google](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/) found 53% of mobile visits ended if a page took **longer than 3 seconds** to load.
-- [Mozilla](https://blog.mozilla.org/metrics/2010/04/05/firefox-page-load-speed-part-ii/) experiment which found that reducing the page load time by 2 seconds led to 15% higher conversion.
-- [Akamai](https://www.akamai.com/us/en/multimedia/documents/report/akamai-state-of-online-retail-performance-2017-holiday.pdf) aggregated data from 17 retailers (7 billion pageviews) and found that conversion rates were highest for pages that loaded in **less than 2 seconds**; longer load times correlated with 50% drops in conversion rates and increased bounce rates, especially for mobile visitors.
+- [Mozilla](https://blog.mozilla.org/metrics/2010/04/05/firefox-page-load-speed-part-ii/) experiment which found that **reducing the page load time by 2 seconds led to 15% higher conversion**.
+- [Akamai](https://www.akamai.com/us/en/multimedia/documents/report/akamai-state-of-online-retail-performance-2017-holiday.pdf) aggregated data from 17 retailers (7 billion pageviews) and found that **conversion rates were highest for pages that loaded in less than 2 seconds**; longer load times correlated with 50% drops in conversion rates and increased bounce rates, especially for mobile visitors.
 
 ### Making UI/UX Improvements
 This experiment was conducted using the B2B or merchant websites from a handful of popular food delivery companies. I chose the website for the market leader and converted the existing [DoorDash B2B website](https://get.doordash.com) to a new CMS and tech stack, with the goal of measuring hypothetical improvements against its competitors.
@@ -34,7 +32,7 @@ This experiment was conducted using the B2B or merchant websites from a handful 
 
 - Performance (incl. speed)
 - Accessibility
-- Best practices
+- Best Practices
 - SEO
 
 | Company                                             |      Performance      |     Accessibility     |     Best Practices     |          SEO          |        Transferred        |          Load Event         |
@@ -70,9 +68,8 @@ In conclusion, improving the B2B websites with an empahsis on performance, acces
 [<img src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/app_screenshot.png">](https://doordash-poc.harrydehal.com)
 ### References
 1. https://www.nngroup.com/articles/the-need-for-speed
-2. https://news.yahoo.com/grocery-delivery-may-cost-extra-184904429.html
-3. https://developers.google.com/web/tools/lighthouse
-4. https://trends.edison.tech/research/on-demand-food-delivery-sales-2020.html
-5. https://www.crunchbase.com/organization/doordash/company_financials
+2. https://developers.google.com/web/tools/lighthouse
+3. https://trends.edison.tech/research/on-demand-food-delivery-sales-2020.html
+4. https://www.crunchbase.com/organization/doordash/company_financials
 
 Case study conducted under fair use and all content © DoorDash.
