@@ -120,6 +120,13 @@
     .signupForm {
         margin-bottom: 4em;
     }
+    .signupCTA h2 {
+        display: none;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+    }
 }
 
 @media (max-width: 480px) {
