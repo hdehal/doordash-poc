@@ -35,6 +35,8 @@ This experiment was conducted using the B2B or merchant websites from a handful 
 - Best Practices
 - SEO
 
+[Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools) were used to measure transferred data size (in KB or MB) and [load event](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor/request_list) (in milliseconds or seconds).
+
 | Company                                             |      Performance      |     Accessibility     |     Best Practices     |          SEO          |        Transferred        |          Load Event         |
 |-----------------------------------------------------|:---------------------:|:---------------------:|:----------------------:|:---------------------:|:-------------------------:|:---------------------------:|
 | [DoorDash POC](https://doordash-poc.harrydehal.com) | 94 :white_check_mark: | 88 :white_check_mark: | 100 :white_check_mark: | 95 :white_check_mark: |           906 KB          | 0.454 ms :white_check_mark: |
