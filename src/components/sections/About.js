@@ -220,7 +220,7 @@ const About = ({ className }) => (
           {/* TALK TO US */}
           <Grid className="grey">
             <div className="talkContainer">
-              <div><h2>Have questions? Talk to a DoorDash Expert</h2></div>
+              <div><h2>Have questions? <span>Talk to a DoorDash Expert</span></h2></div>
               <div>
               <a href="https://get.doordash.com/?ft=Mg==#" class="btn btn-primary">Talk to an Expert</a>
               </div>
