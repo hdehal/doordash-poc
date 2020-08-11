@@ -1,37 +1,24 @@
-# gatsby-absurd
+### B2B Food Delivery Website Case Study
+Intro text TBD
 
-An absurd Gatsby starter. The collection of illustrations, [absurd.design](https://absurd.design/) by [Diana Valeanu](https://twitter.com/diana_valeanu) is a very fascinating and beautiful project with some pretty thoughtful concepts. Experimentation on how that could be put together on a site ended up as this starter.
+### Lighthouse Test Results
+| Company      | Performance | Accessibility | Best Practices | SEO | Transferred | Load Event |
+|--------------|:-------------------------------------:|:-------------:|:---------------:|:----------------:|:-----:|:-------------:|------------|
+| [DoorDash POC](https://doordash-poc.harrydehal.com) | 93 :white_check_mark:         | 88 :white_check_mark:           | 100 :white_check_mark:           | 95 :white_check_mark:  | 906 KB :white_check_mark:      | 0.454 ms :white_check_mark:   |
+| [DoorDash](https://get.doordash.com)            | 29          | 72            | 77             | 80  | 2.23 MB     | 4.354 s    |
+| [Grubhub](https://get.grubhub.com)             | 30          | 70            | 92             | 85  | 2.84 MB     | 2.742 s    |
+| [Postmates](https://postmates.com/partner)       | 29          | 70            | 92             | 85  | 2.33 MB     | 1.446 s    |
+| [Uber Eats](https://www.ubereats.com/restaurant) | 17          | 68            | 85             | 92  | 1.48 MB     | 1.580 s    |
+| [Zomato](https://www.zomato.com/business)     | 53          | 56            | 77             | 82  | 628 KB      | 1.191 s    |
 
-![screenshot](https://user-images.githubusercontent.com/20743219/85018804-64ec4e00-b18b-11ea-9aa0-d4be033efff8.png)
+### Dev/Testing Environment:
+Node.js v12.14.1
+- Yarn v1.21.1
+- Gatsby v2.24.37
 
-[Live Demo](https://gatsby-absurd.vercel.app/)
-
-## Installation
-
-Install the dependencies:
-
-### `yarn install`
-
-Run the development server:
-
-### `yarn dev`
-
-Production build to `/public`:
-
-### `yarn build`
-
-Cleanup cache (often fixes misc errors when run before `yarn dev`):
-
-### `yarn clean`
-
-## Content
-
-Each of the sections in the site are placed in `src/sections`. Data is usually separated out into objects/arrays to be rendered in the component.
-
-## SEO
-
-The component `src/components/common/SEO.js` handles all meta data and SEO content, modify the `SEO_DATA` variable to add the data automatically. For application manifest data and favicon, modify the `gatsby-plugin-manifest` configuration in `gatsby-config.js`.
-
-## Styling
-
-This project uses [styled-components]() to handle styling: `src/styles/theme.js` defines the styling base and `src/styles/GlobalStyles.js` includes basic element styles along with the CSS Reset.
+macOS v10.15.3
+- Firefox 79.0 (64-bit)
+-- Dev Tools (Network)
+-- iPhone 6/7/8 iOS (Emulation)
+- Chrome 84.0.4147.105 (Official 64-bit)
+-- Lighthouse
