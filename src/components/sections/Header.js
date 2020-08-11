@@ -46,7 +46,7 @@ const Header = ({ className }) => (
                   <label for="restName">Restaurant Name</label>
                   <input type="text" id="restAddress" aria-placeholder="Restaurant Address" placeholder="Restaurant Address" />
                   <label for="restAddress">Restaurant Address</label>
-                  <input type="text" id="restEmail" aria-placeholder="Email" placeholder="Email" />
+                  <input type="email" id="restEmail" aria-placeholder="Email" placeholder="Email" />
                   <label for="restEmail">Email</label>
                   <input type="tel" id="restTel" aria-placeholder="Mobile Phone" placeholder="Mobile Phone e.g. 415-888-8888" />
                   <label for="restTel">Mobile Phone</label>
