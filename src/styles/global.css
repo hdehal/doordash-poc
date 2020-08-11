@@ -487,6 +487,9 @@ div[class^="horizontalSlider"] {
     font-size: 1em !important;
     color: gray;
 }
+.copyrightContainer li {
+    margin: 0.5em 0em 0.5em 0em;
+}
 .copyrightContainer h1 {
     font-size: 1em;
     font-weight: 600;
@@ -512,6 +515,7 @@ div[class^="horizontalSlider"] {
     margin-right: 1em;
     color: gray !important;
     text-decoration: none !important;
+    padding: 3px;
 }
 .custom-copyright img {
     vertical-align: text-top;

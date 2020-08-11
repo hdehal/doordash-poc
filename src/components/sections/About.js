@@ -223,7 +223,7 @@ const About = ({ className }) => (
             <div className="talkContainer">
               <div><h2>Have questions? Talk to a DoorDash Expert</h2></div>
               <div>
-              <a href="https://get.doordash.com/reach-new-customers?hsLang=en" class="btn btn-primary">Talk to an Expert</a>
+              <a href="https://get.doordash.com/?ft=Mg==#" class="btn btn-primary">Talk to an Expert</a>
               </div>
             </div>
           </Grid>
