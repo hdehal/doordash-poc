@@ -1,5 +1,5 @@
 ### Case Study: Every Second Counts for Hungry Customers
-Competition in the food delivery market is fierce, particularly with the impact of pandemic-weary consumers and hindered demand for dine-in restaurants. As of 2020, DoorDash has the largest market share of 45%, followed closely by the combined shares of Uber Eats and Postmates at 37% (following a July 2020 acqusition).
+Competition in the food delivery market is fierce, particularly with the impact of pandemic-weary consumers and hindered demand for dine-in restaurants. As of 2020, DoorDash has the largest market share of 45%, followed closely by the combined shares of Uber Eats and Postmates at 37% (following a July 2020 acquisition).
 
 <img align="right" width="450" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_npr_marketshare.png">
 
@@ -47,13 +47,15 @@ This experiment was conducted using the B2B or merchant websites from a handful 
 ### CRO and Calculating the Cost of Speed
 On the consumer side DoorDash customers spent $36 per transaction, while Grubhub customers spent the highest average price per transaction at $41 and UberEats trailed at $31. While the respective app stores (Apple and Google Play) and the delivery apps themselves are important launchpads for consumer purchases, the B2B or merchant websites are ultimately the last-mile or gatekeepers for new restaurant sign-ups.
 
-With DoorDash having a market share of 45% and revenue upwards of $900m per year, reducing the page load time by merely 2 seconds could lead to a higher merchant *conversion rate optimization* (CRO) of 15% (per Mozilla) up to 50%+ (per Akamai and Google).
-
 <img align="right" width="450" src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/edison_prices.png">
 
-In conclusion, improving the B2B websites with an empahsis on performance, accessibility (a11y), internationalization (i18n), SEO, and overall UI/UX best practices can help capture tens of millions of dollars in revenue by optimizing merchant conversion rates (CRO), which are extremely vulnerable to *hungry* (or *hangry*) customers impacted by speed or other accessibility issues. Ultimately, with food delivery, every second counts for hungry customers.
+With DoorDash having a market share of 45% and revenue upwards of $900m per year, reducing the page load time by merely 2 seconds could lead to a higher merchant *conversion rate optimization* (CRO) of 15% (per Mozilla) up to 50%+ (per Akamai and Google).
 
-### Dev/Test Environment:
+### Conclusion
+
+In conclusion, improving the B2B websites with an emphasis on performance, accessibility (a11y), internationalization (i18n), SEO, and overall UI/UX best practices can help capture tens of millions of dollars in revenue by optimizing merchant conversion rates (CRO), which are extremely vulnerable to *hungry* (or *hangry*) customers impacted by speed or other accessibility issues. Ultimately, with food delivery, every second counts for hungry customers.
+
+### Dev/Test Environment
 **Node.js v12.14.1**
 - Yarn v1.21.1
 - Gatsby v2.24.37
@@ -68,8 +70,9 @@ In conclusion, improving the B2B websites with an empahsis on performance, acces
 [<img src="https://raw.githubusercontent.com/hdehal/doordash-poc/master/static/app_screenshot.png">](https://doordash-poc.harrydehal.com)
 ### References
 1. https://www.nngroup.com/articles/the-need-for-speed
-2. https://developers.google.com/web/tools/lighthouse
-3. https://trends.edison.tech/research/on-demand-food-delivery-sales-2020.html
-4. https://www.crunchbase.com/organization/doordash/company_financials
+2. https://www.npr.org/sections/coronavirus-live-updates/2020/07/06/887961123/uber-gobbles-up-postmates-in-2-65-billion-bet-on-food-delivery
+3. https://developers.google.com/web/tools/lighthouse
+4. https://trends.edison.tech/research/on-demand-food-delivery-sales-2020.html
+5. https://www.crunchbase.com/organization/doordash/company_financials
 
 Case study conducted under fair use and all content © DoorDash.
