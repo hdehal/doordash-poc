@@ -115,7 +115,7 @@
 /* Mobile responsive breakpoint */
 @media (max-width: 960px) {
     .header {
-        height: 110vh !important;
+
     }
     .signupForm {
         margin-bottom: 4em;
@@ -152,10 +152,7 @@
     }
     .signupForm {
         margin-bottom: 1em;
-        height: 120vh;
-    }
-    .header {
-        height: 120vh !important;
+
     }
     .section {
         background-color: rgba(236, 251, 251, 0.8);
@@ -228,11 +225,8 @@
 }
 
 @media (max-width: 480px) {
-    .signupCTA {
-        padding-top: 25em;
-    }
     .header {
-        height: 100vh !important;
+        min-height: 100vh;
     }
 }
 
