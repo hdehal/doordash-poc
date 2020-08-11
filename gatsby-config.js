@@ -48,5 +48,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-159568942-3`,
+        head: false,
+        anonymize: true,
+      },
+    },
   ],
 };
